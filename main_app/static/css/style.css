@@ -1,4 +1,4 @@
 body {
-    background-color: aquamarine;
-    /* background: url("images/gif.gif") no-repeat; */
+    /* background-color: aquamarine; */
+    background: white url("images/gif.gif") no-repeat;
 } 

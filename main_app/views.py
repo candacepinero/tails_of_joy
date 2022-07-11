@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Pet
+from .forms import FeedForm
 
 # Home view
 def home(request):
@@ -15,13 +16,24 @@ def home(request):
 @login_required
 def pets_index(request):
     pets = Pet.objects.filter(user=request.user)
+    
     return render(request, 'pets/index.html', {'pets': pets})
 
 # detail view
 @login_required
 def pets_detail(request, pet_id):
     pet = Pet.objects.get(id=pet_id)
-    return render(request, 'pets/detail.html', {'pet': pet})
+    feed_form = FeedForm()
+    return render(request, 'pets/detail.html', {'pet': pet, 'feed_form': feed_form})
+
+# feed view
+def add_feed(request, pet_id):
+    form = FeedForm(request.POST)
+    if form.is_valid():
+        new_feed = form.save(commit=False)
+        new_feed.pet_id = pet_id
+        new_feed.save()
+    return redirect('detail', pet_id=pet_id)
 
 # sign up view
 def signup(request):
