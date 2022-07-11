@@ -1,44 +1,47 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tails Of Joy</title>
 <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     /> 
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"
 
 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-  </head>
-  <body>
+</head>
+<body>
     <header class="navbar-fixed">
         <nav>
-          <div class="nav-wrapper">
+        <div class="nav-wrapper">
             <ul>
-              <li>
+            <li>
                 <a href="/" class="left brand-logo">&nbsp;&nbsp; Tails Of Joy</a>
-              </li>
+            </li>
             </ul>
             <ul class="right">
-              <li><a href="/about">Create Pet</a></li>
-              <li><a href="/petlist">Pet List</a></li>
-              <li><a href="/login">login</a></li>
-              <li><a href="/Logout">Logout</a></li>
-              <li><a href="/signup">Sign Up</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'pets_create' %}">Create Pet</a></li>
+                <li><a href="{% url 'index' %}">Pet List</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">login</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            {% endif %}
             </ul>
-          </div>
+        </div>
         </nav>
-      </header>
+    </header>
     <main class="container">{% block content %} {% endblock %}</main>
     <footer class="page-footer">
-      <div class="right">
+    <div class="right">
         All Rights Reserved, © 2022 Tails Of Joy  
-      </div>
+    </div>
     </footer>
 
-  </body>
+</body>
 </html>
