@@ -10,4 +10,5 @@ urlpatterns = [
     path('pets/<int:pk>/delete/', views.PetDelete.as_view(), name='pets_delete'),
     path('accounts/signup/', views.signup, name='signup'),
     path('pets/<int:pet_id>/add_feed/', views.add_feed, name="add_feed"),
+    path('pets/<int:pet_id>/add_photo/', views.add_photo, name='add_photo'),
 ]
