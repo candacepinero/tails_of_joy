@@ -1,15 +1,19 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Delete Pet</h1>
+<div class="card-image"> 
+    {% for photo in pet.photo_set.all %}
+    <img src="{{photo.url}}" height="400"/>
+    {% endfor %}
+</div>
 
-<h4>
+<h4 class="white-text">
     Are you sure you want to delete
-    <span class="teal-text">{{ object.name }}</span>
+    <span class="blue-text">{{ object.name }}</span>
 </h4>
 
 <form action="" method="POST">
     {% csrf_token %}
     <input type="submit" value="Yes" class="btn" />
-    <a href="{% url 'detail' pet.id %}">Cancel</a>
+    <a class="btn" href="{% url 'detail' pet.id %}">Cancel</a>
 
 
 </form>
