@@ -14,3 +14,11 @@ footer {
     padding-top: 0;
     text-align: right;
 }
+
+.home-img {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    left: -80px;
+    top: 250px;
+}
