@@ -27,7 +27,7 @@ application allowing users to create, edit, and delete.
 
 [Trello board](https://trello.com/invite/b/6wutKFMZ/2ac19357e5da28ab87d96f2bef8dfacb/tails-of-joy) 
 
-[Click here to visit site]() 
+[Click here to visit site](https://tailsofjoy.herokuapp.com/) 
 
 ### Future Enhancements
 * Adding a health bar to the users pets and have it decrease if they do not feed their pet
