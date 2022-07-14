@@ -3,7 +3,7 @@ is a application that allows users to create Mythical creature. Using django's b
 create an account that will hold all of their Mythical creature. Tails Of Joy is a full CRUD 
 application allowing users to create, edit, and delete.
 
-![screenshot](![Screen Shot 2022-07-13 at 11 54 56 PM](https://user-images.githubusercontent.com/103546768/178894905-28611816-9891-431a-937c-70bdd5866705.png)
+(![Screen Shot 2022-07-13 at 11 54 56 PM](https://user-images.githubusercontent.com/103546768/178894905-28611816-9891-431a-937c-70bdd5866705.png)
 )
 
 ## Technologies used
