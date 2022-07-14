@@ -8,7 +8,7 @@
             <div class="card-image">
                 
             {% for photo in pet.photo_set.all %}
-                <img style="height: 30rem;" src="{{photo.url}}"/>
+                <img style="height: 40rem;" src="{{photo.url}}"/>
             {% empty %}
                 <div class="teal-text">No Photo</div>
             {% endfor %}
@@ -19,7 +19,7 @@
             <p>Gender: {{ pet.gender }}</p>
             <p>Lives In: {{ pet.lives_in }}</p>
             <p>Personality: {{ pet.personality }}</p>
-            <p>HP: {{ pet.hp }}</p>
+            
         </div>
         {% comment %} for loop to display uploaded photo {% endcomment %}
             <div class="card-action">
