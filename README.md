@@ -30,5 +30,5 @@ application allowing users to create, edit, and delete.
 [Click here to visit site](https://tailsofjoy.herokuapp.com/) 
 
 ### Future Enhancements
-* Adding a health bar to the users pets and have it decrease if they do not feed their pet
+* Adding a health bar to the users pets and have it decrease if they does not feed their pet
 * The ability for users to add other users as friends and share their list of pets
